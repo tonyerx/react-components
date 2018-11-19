@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="expires" content="">
+		<link rel="icon" href="https://www.lizhi.fm/images/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="https://www.lizhi.fm/images/favicon.ico" type="image/x-icon">
+		<title>DEMO</title>
+		<script type="text/javascript">
+			var baseWidth = 375;
+      var scale = 1;
+      if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+        var version = parseFloat(RegExp.$1);
+        if (version > 2.3) {
+          var phoneScale = parseInt(window.screen.width) / baseWidth * scale;
+          document.write('<meta name="viewport" content="width=' + baseWidth + ', minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+        } else {
+          document.write('<meta name="viewport" content="width=' + baseWidth + ', target-densitydpi=device-dpi">');
+        }
+      } else {
+        document.write('<meta name="viewport" content="width=' + baseWidth + ', user-scalable=no, target-densitydpi=device-dpi">');
+      }
+		</script>
+	</head>
+
+	<body>
+		<div id="root"></div>
+		<script>
+			document.body.onselectstart = function () {
+				return false;
+			};
+		</script>
+	</body>
+
+</html>
